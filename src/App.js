@@ -5,6 +5,7 @@ import Main from './components/main';
 import DescriptionsActivities from './components/DescriptionsActivities';
 import Contacts from './components/contacts';
 import Footer from './components/footer';
+import ModalGreenwich from './components/modal_greenwich';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <DescriptionsActivities />
       <Contacts />
       <Footer />
+      <ModalGreenwich />
     </>
   );
 }
