@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../images/safari-pinned-tab 1.png';
 import clock from '../images/clock.png';
 import phone from '../images/phone.png';
 import burger from '../images/button.png';
+import { ModalGreenwich } from './modal_greenwich';
 
 const Section = styled.section`
   max-width: 1920px;
@@ -60,8 +61,15 @@ const Icon = styled.img`
 `;
 
 export default function Navigate() {
+  const [openModal, setOpenModal] = useState(false);
+
+  const showModal = () => {
+    // функция переключает состояние вперед и назад
+    setOpenModal((prev) => !prev);
+  };
   return (
     <>
+      <ModalGreenwich openModal={openModal} setOpenModal={setOpenModal} />
       <Section>
         <Nav>
           <Logo>
@@ -78,7 +86,7 @@ export default function Navigate() {
               <Icon src={phone} alt="phone" />
               <div>+48 512 824 953</div>
             </Text>
-            <Burg />
+            <Burg onClick={showModal} />
           </Info>
         </Nav>
       </Section>

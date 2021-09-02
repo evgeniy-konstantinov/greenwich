@@ -12,15 +12,20 @@ const ModalWindow = styled.div`
   height: 969px;
   left: 0px;
   top: 0px;
+  background: #fff;
+  position: absolute;
+  overflow: hidden;
+  z-index: 20;
 `;
 
 const ModalLogo = styled.div`
-  margin: 13px auto 0;
-  width: 839px;
+  margin: 13px 0 0 195px;
+  width: 1100px;
   height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transform: translate();
 `;
 
 const ButtonClose = styled.button`
@@ -33,15 +38,16 @@ const ButtonClose = styled.button`
 `;
 
 const MainContent = styled.div`
-  width: 100%;
-  margin: 73px auto 0;
+  width: 1112px;
+  margin: 73px 0 0 165px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: baseline;
 `;
 
 const MainDescription = styled.div`
   width: 484px;
+  padding: 0;
 `;
 const Description = styled.div`
   display: flex;
@@ -63,6 +69,13 @@ const IndustrialImg = styled.img`
 
 const About = styled.div`
   width: 485px;
+  margin-left: 95px;
+`;
+
+const Icon = styled.img`
+  width: 36px;
+  height: 36px;
+  object-fit: none;
 `;
 
 const Href = styled.a`
@@ -79,40 +92,45 @@ const Href = styled.a`
   }
 `;
 
-export default function ModalGreenwich() {
+export const ModalGreenwich = ({ openModal, setOpenModal }) => {
   return (
-    <ModalWindow>
-      <ModalLogo>
-        <img src={ModLogo} />
-        <ButtonClose />
-      </ModalLogo>
-      <MainContent>
-        <MainDescription>
-          <Description>
-            <img src={clock} />
-            <Text>Working hours: 08.00 – 20.00 </Text>
-          </Description>
-          <Description>
-            <img src={phone} />
-            <Text>+48 512 824 953 </Text>
-          </Description>
-          <Description>
-            <img src={poi} />
-            <Text>
-              91 BATTERSEA PARK ROAD, LONDON, ENGLAND, SW8 4DU UNITED KINGDOW
-            </Text>
-          </Description>
-          <IndustrialImg src={industrial} />
-        </MainDescription>
-        <About>
-          <Href href="#">About us</Href>
-          <Href href="#">Electronic equipment</Href>
-          <Href href="#">Industrial equipment </Href>
-          <Href href="#">Metal</Href>
-          <Href href="#">Agricultural products</Href>
-          <Href href="#">Contact Us</Href>
-        </About>
-      </MainContent>
-    </ModalWindow>
+    <>
+      {openModal ? (
+        <ModalWindow>
+          <ModalLogo>
+            <img src={ModLogo} />
+            <ButtonClose onClick={() => setOpenModal((prev) => !prev)} />
+          </ModalLogo>
+          <MainContent>
+            <MainDescription>
+              <Description>
+                <Icon src={clock} />
+                <Text>Working hours: 08.00 – 20.00 </Text>
+              </Description>
+              <Description>
+                <Icon src={phone} />
+                <Text>+48 512 824 953 </Text>
+              </Description>
+              <Description>
+                <Icon src={poi} />
+                <Text>
+                  91 BATTERSEA PARK ROAD, LONDON, ENGLAND, SW8 4DU UNITED
+                  KINGDOW
+                </Text>
+              </Description>
+              <IndustrialImg src={industrial} />
+            </MainDescription>
+            <About>
+              <Href href="http://www.greenwich-company.com/">About us</Href>
+              <Href href="#">Electronic equipment</Href>
+              <Href href="#">Industrial equipment </Href>
+              <Href href="#">Metal</Href>
+              <Href href="#">Agricultural products</Href>
+              <Href href="#">Contact Us</Href>
+            </About>
+          </MainContent>
+        </ModalWindow>
+      ) : null}
+    </>
   );
-}
+};
