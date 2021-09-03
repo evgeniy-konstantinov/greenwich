@@ -8,36 +8,60 @@ import corn from '../images/corn.png';
 import vector from '../images/vector.png';
 
 const BusinessMain = styled.div`
+  width: 100%;
   height: 501px;
   background-color: rgba(15, 111, 152, 0.1);
+  @media screen and (max-width: 767px) {
+    height: 583px;
+  }
 `;
 
 const BusinessText = styled.div`
   height: 100%;
   width: 1110px;
   margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 const HeadingBlock = styled.div`
   padding-top: 60px;
   margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    margin: 30px 0 0 20px;
+    padding-top: 30px;
+  }
 `;
 
 const BusinessFlex = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 const BusinessBlock = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 767px) {
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 const BusinessImg = styled.img`
   width: 255px;
   height: 205px;
   margin-bottom: 20px;
+  @media screen and (max-width: 767px) {
+    width: 130px;
+    height: 90px;
+    margin: 30px 20px 0 20px;
+  }
 `;
 
 const Description = styled.p`
@@ -45,6 +69,9 @@ const Description = styled.p`
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+  }
 `;
 
 const Href = styled.a`
@@ -64,43 +91,51 @@ export default function BusinessActivities() {
         <BusinessFlex>
           <BusinessBlock>
             <BusinessImg src={microboard} />
-            <Description>Electronic equipment</Description>
-            <Href>
-              Learn more
-              <Span>
-                <img src={vector} />
-              </Span>
-            </Href>
+            <div>
+              <Description>Electronic equipment</Description>
+              <Href href="#">
+                Learn more
+                <Span>
+                  <img src={vector} />
+                </Span>
+              </Href>
+            </div>
           </BusinessBlock>
           <BusinessBlock>
             <BusinessImg src={machine} />
-            <Description>Industrial equipment</Description>
-            <Href>
-              Learn more
-              <Span>
-                <img src={vector} />
-              </Span>
-            </Href>
+            <div>
+              <Description>Industrial equipment</Description>
+              <Href href="#">
+                Learn more
+                <Span>
+                  <img src={vector} />
+                </Span>
+              </Href>
+            </div>
           </BusinessBlock>
           <BusinessBlock>
             <BusinessImg src={metal} />
-            <Description>Metal</Description>
-            <Href>
-              Learn more
-              <Span>
-                <img src={vector} />
-              </Span>
-            </Href>
+            <div>
+              <Description>Metal</Description>
+              <Href href="#">
+                Learn more
+                <Span>
+                  <img src={vector} />
+                </Span>
+              </Href>
+            </div>
           </BusinessBlock>
           <BusinessBlock>
             <BusinessImg src={corn} />
-            <Description>Agricultural products</Description>
-            <Href>
-              Learn more
-              <Span>
-                <img src={vector} />
-              </Span>
-            </Href>
+            <div>
+              <Description>Agricultural products</Description>
+              <Href href="#">
+                Learn more
+                <Span>
+                  <img src={vector} />
+                </Span>
+              </Href>
+            </div>
           </BusinessBlock>
         </BusinessFlex>
       </BusinessText>

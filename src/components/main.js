@@ -11,12 +11,16 @@ const MainSection = styled.section`
   max-width: 1920px;
   height: 864px;
   background: url(${ship}) no-repeat;
-  background-size: cover;
-
+  background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 530px;
+    align-items: flex-start;
+  }
 `;
 
 const MainContent = styled.div`
@@ -24,6 +28,13 @@ const MainContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 249px;
+    margin: 44px 0 0 20px;
+  }
 `;
 
 const MainFlex = styled.div`
@@ -31,6 +42,10 @@ const MainFlex = styled.div`
   display: flex;
   flex-direction: column;
   margin: 162px 792px 0 405px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 const Fact = styled.h1`
@@ -40,6 +55,11 @@ const Fact = styled.h1`
   line-height: 54px;
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Text = styled.p`
@@ -50,16 +70,30 @@ const Text = styled.p`
   line-height: 41px;
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    font-size: 18px;
+    line-height: 26px;
+  }
 `;
 const SubContent = styled.div`
   width: 1110px;
   height: 514px;
   margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    max-height: 701px;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const SubText = styled.div`
   margin-bottom: 70px;
   padding-top: 70px;
+  @media screen and (max-width: 767px) {
+    margin: 20px 20px 30px 20px;
+    padding: 0;
+  }
 `;
 
 const AboutUs = styled.h2`
@@ -68,11 +102,20 @@ const AboutUs = styled.h2`
   line-height: 54px;
   color: #0f6f98;
   margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
+    line-height: 33px;
+  }
 `;
 const Description = styled.p`
   font-size: 18px;
   line-height: 29px;
   color: #131313;
+  @media screen and (max-width: 767px) {
+    width: 374px;
+    font-size: 16px;
+    line-height: 26px;
+  }
 `;
 export default function Main() {
   return (

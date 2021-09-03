@@ -8,6 +8,10 @@ const MainFooter = styled.div`
   max-width: 1920px;
   height: 206px;
   background: #003952;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const FooterFlex = styled.div`
@@ -15,20 +19,34 @@ const FooterFlex = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  /* position: relative; */
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
-
-const FooterDescription = styled.div``;
 
 const FooterImg = styled.img`
   width: 259px;
   height: 90px;
   margin: 32px 0 28px;
+  @media screen and (max-width: 767px) {
+    margin: 40px 0;
+  }
 `;
 
 const Copyright = styled.p`
   color: #fff;
   font-size: 12px;
   line-height: 28px;
+  /* position: absolute; */
+  display: inline-block;
+  margin-left: 395px;
+  @media screen and (max-width: 767px) {
+    margin: 0 0 40px 58px;
+    display: inline-block;
+  }
 `;
 
 const FooterAddress = styled.div`
@@ -37,11 +55,20 @@ const FooterAddress = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 `;
 
 const Address = styled.div`
   display: flex;
   align-items: flex-start;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const SubText = styled.div`
@@ -54,12 +81,8 @@ export default function Footer() {
   return (
     <MainFooter>
       <FooterFlex>
-        <FooterDescription>
-          <FooterImg src={logo} />
-          <Copyright>
-            Copyright © 2021 GREENWICH TRADE LIMITED. All rights reserved.
-          </Copyright>
-        </FooterDescription>
+        <FooterImg src={logo} />
+
         <FooterAddress>
           <Address>
             <img src={poi} />
@@ -74,6 +97,9 @@ export default function Footer() {
           </Address>
         </FooterAddress>
       </FooterFlex>
+      <Copyright>
+        Copyright © 2021 GREENWICH TRADE LIMITED. All rights reserved.
+      </Copyright>
     </MainFooter>
   );
 }

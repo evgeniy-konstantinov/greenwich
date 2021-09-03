@@ -13,10 +13,18 @@ const MainContacts = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+  }
 `;
 const ContactsBlock = styled.div`
   width: 730px;
   margin: 30px auto 0;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const Form = styled.form`
@@ -33,6 +41,11 @@ const SmallInput = styled.input`
   border-radius: 10px;
   background: transparent;
   outline: none;
+  @media screen and (max-width: 767px) {
+    margin: 0 20px 20px 20px;
+    height: 60px;
+    width: 374px;
+  }
 `;
 
 const BigInput = styled.input`
@@ -44,6 +57,11 @@ const BigInput = styled.input`
   border: 2px solid rgba(15, 111, 152, 0.4);
   background: transparent;
   outline: none;
+  @media screen and (max-width: 767px) {
+    width: 374px;
+    height: 60px;
+    margin: 0 20px 20px 20px;
+  }
 `;
 
 const BigerInput = styled.textarea`
@@ -56,6 +74,10 @@ const BigerInput = styled.textarea`
   background: transparent;
   outline: none;
   resize: none;
+  @media screen and (max-width: 767px) {
+    width: 374px;
+    margin-left: 20px;
+  }
 `;
 
 const SubText = styled.p`
@@ -65,6 +87,10 @@ const SubText = styled.p`
   text-align: center;
   color: rgba(19, 19, 19, 0.6);
   opacity: 0.8;
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    margin: 20px 0 40px;
+  }
 `;
 
 const ProdjectBtn = styled.button`
@@ -76,6 +102,9 @@ const ProdjectBtn = styled.button`
   background: url(${projects__button});
   border: none;
   cursor: pointer;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 let ScrollUp = () => {

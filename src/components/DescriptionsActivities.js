@@ -11,12 +11,27 @@ const DescriptionsBlock = styled.div`
   width: 1110px;
   margin: 0 auto;
   padding-top: 90px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* max-height: 2808px; */
+    padding-top: 30px;
+  }
 `;
 
 const DescriptionsText = styled.div`
   width: 100%;
   height: 329px;
   margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 30px;
+  }
 `;
 
 const Description = styled.p`
@@ -24,11 +39,28 @@ const Description = styled.p`
   line-height: 29px;
   color: #131313;
   padding-top: 30px;
+  @media screen and (max-width: 767px) {
+    margin: 20px 20px 0 20px;
+    width: 374px;
+  }
 `;
 
 const DescriptionImg = styled.img`
   width: 445px;
   height: 329px;
+  @media screen and (max-width: 767px) {
+    width: 374px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+`;
+
+const BlockH2 = styled.div`
+  @media screen and (max-width: 767px) {
+    order: -1;
+    margin: 0 0 30px 20px;
+  }
 `;
 
 const Div = styled.div`
@@ -45,6 +77,13 @@ const Div = styled.div`
     css`
       margin-left: 48px;
     `};
+  @media screen and (max-width: 767px) {
+    width: 374px;
+    height: 260px;
+    clear: both;
+    margin: 0;
+    padding: 0 20px;
+  }
 `;
 export default function DescriptionsActivities() {
   return (
@@ -53,7 +92,9 @@ export default function DescriptionsActivities() {
         <Div lefts>
           <DescriptionImg src={microboard} />
         </Div>
-        <H2>Electronic equipment</H2>
+        <BlockH2>
+          <H2>Electronic equipment</H2>
+        </BlockH2>
         <Description>
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
@@ -69,7 +110,9 @@ export default function DescriptionsActivities() {
         <Div left right>
           <DescriptionImg src={machine} />
         </Div>
-        <H2>Industrial equipment</H2>
+        <BlockH2>
+          <H2>Industrial equipment</H2>
+        </BlockH2>
         <Description>
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
@@ -85,7 +128,9 @@ export default function DescriptionsActivities() {
         <Div lefts>
           <DescriptionImg src={metal} />
         </Div>
-        <H2>Metal</H2>
+        <BlockH2>
+          <H2>Metal</H2>
+        </BlockH2>
         <Description>
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
@@ -101,7 +146,9 @@ export default function DescriptionsActivities() {
         <Div left right>
           <DescriptionImg src={corn} />
         </Div>
-        <H2>Agricultural products</H2>
+        <BlockH2>
+          <H2>Agricultural products</H2>
+        </BlockH2>
         <Description>
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of

@@ -12,6 +12,10 @@ const Section = styled.section`
   z-index: 10;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const Nav = styled.nav`
@@ -20,10 +24,27 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 52px;
+    margin-top: 15px;
+  }
 `;
 
 const Logo = styled.div`
   margin-left: 5px;
+  @media screen and (max-width: 767px) {
+    height: 52px;
+    width: 149px;
+    margin-left: 25px;
+  }
+`;
+
+const LogoGreenwich = styled.img`
+  @media screen and (max-width: 767px) {
+    height: 52px;
+    width: 149px;
+  }
 `;
 
 const Info = styled.div`
@@ -39,6 +60,9 @@ const Text = styled.div`
   font-size: 16px;
   align-items: center;
   display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const Burg = styled.button`
@@ -49,6 +73,9 @@ const Burg = styled.button`
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  @media screen and (max-width: 767px) {
+    margin: 0 25px 0 0;
+  }
 `;
 
 const Time = styled.span`
@@ -73,7 +100,7 @@ export default function Navigate() {
       <Section>
         <Nav>
           <Logo>
-            <img src={logo} alt="logo" />
+            <LogoGreenwich src={logo} alt="logo" />
           </Logo>
           <Info>
             <Text>
