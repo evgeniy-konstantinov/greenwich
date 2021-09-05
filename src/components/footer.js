@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import logo from '../images/safari-pinned-tab 1.png';
-import phone from '../images/phone.png';
-import poi from '../images/poi_outlined.png';
+import React from "react";
+import styled from "styled-components";
+import logo from "../images/safari-pinned-tab 1.png";
+import phone from "../images/phone.png";
+import poi from "../images/poi_outlined.png";
 
 const MainFooter = styled.div`
   max-width: 1920px;
   height: 206px;
   background: #003952;
   @media screen and (max-width: 767px) {
-    width: 100%;
+    width: 100vw;
     height: 100%;
   }
 `;
@@ -46,7 +46,7 @@ const Copyright = styled.p`
   @media screen and (max-width: 767px) {
     margin: 0 0 40px 58px;
     display: inline-block;
-  }
+    
 `;
 
 const FooterAddress = styled.div`

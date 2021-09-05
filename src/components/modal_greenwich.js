@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import BtnClose from '../images/ButtonClose.png';
-import ModLogo from '../images/ModalLogo.png';
-import clock from '../images/modal_time.png';
-import phone from '../images/modal_phone.png';
-import poi from '../images/modal_poi.png';
-import industrial from '../images/industrial-port.png';
+import React from "react";
+import styled from "styled-components";
+import BtnClose from "../images/ButtonClose.png";
+import ModLogo from "../images/ModalLogo.png";
+import clock from "../images/modal_time.png";
+import phone from "../images/modal_phone.png";
+import poi from "../images/modal_poi.png";
+import industrial from "../images/industrial-port.png";
 
 const ModalWindow = styled.div`
   width: 1440px;
@@ -16,6 +16,10 @@ const ModalWindow = styled.div`
   position: absolute;
   overflow: hidden;
   z-index: 20;
+  @media screen and (max-width: 767px) {
+    width: 414px;
+    height: 896px;
+  }
 `;
 
 const ModalLogo = styled.div`
@@ -25,7 +29,11 @@ const ModalLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transform: translate();
+  @media screen and (max-width: 767px) {
+    margin: 20px 20px 47px 20px;
+    width: 414px;
+    height: 52px;
+  }
 `;
 
 const ButtonClose = styled.button`
@@ -35,6 +43,9 @@ const ButtonClose = styled.button`
   background-image: url(${BtnClose});
   border: none;
   cursor: pointer;
+  @media screen and (max-width: 767px) {
+    margin-right: 40px;
+  }
 `;
 
 const MainContent = styled.div`
@@ -43,17 +54,33 @@ const MainContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: baseline;
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    margin: 0;
+    width: 414px;
+  }
 `;
 
 const MainDescription = styled.div`
   width: 484px;
   padding: 0;
+  @media screen and (max-width: 767px) {
+    width: 414px;
+    margin: 141px 0 0 20px;
+  }
 `;
+
 const Description = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-top: 42px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
 `;
 
 const Text = styled.p`
@@ -61,15 +88,26 @@ const Text = styled.p`
   font-size: 22px;
   line-height: 28px;
   color: #131313;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    width: 318px;
+  }
 `;
 
 const IndustrialImg = styled.img`
   margin-top: 100px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const About = styled.div`
   width: 485px;
   margin-left: 95px;
+  @media screen and (max-width: 767px) {
+    width: 350px;
+    margin-left: 20px;
+  }
 `;
 
 const Icon = styled.img`
@@ -89,6 +127,9 @@ const Href = styled.a`
   :hover {
     color: #0f6f98;
     margin-left: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
   }
 `;
 

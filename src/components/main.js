@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import ship from '../images/ship-in-sea.png';
-import Btn from '../components/button';
-import Navigate from './nav';
+import React from "react";
+import styled from "styled-components";
+import ship from "../images/ship-in-sea.png";
+import Btn from "../components/button";
+import Navigate from "./nav";
 
 const MainSection = styled.section`
   position: relative;
@@ -83,7 +83,7 @@ const SubContent = styled.div`
   @media screen and (max-width: 767px) {
     max-height: 701px;
     height: 100%;
-    width: 100%;
+    width: 100vw;
   }
 `;
 
