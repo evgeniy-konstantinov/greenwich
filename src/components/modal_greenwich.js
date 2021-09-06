@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import BtnClose from "../images/ButtonClose.png";
-import ModLogo from "../images/ModalLogo.png";
-import clock from "../images/modal_time.png";
-import phone from "../images/modal_phone.png";
-import poi from "../images/modal_poi.png";
-import industrial from "../images/industrial-port.png";
+import React from 'react';
+import styled from 'styled-components';
+import BtnClose from '../images/ButtonClose.png';
+import ModLogo from '../images/ModalLogo.png';
+import clock from '../images/modal_time.png';
+import phone from '../images/modal_phone.png';
+import poi from '../images/modal_poi.png';
+import industrial from '../images/industrial-port.png';
 
 const ModalWindow = styled.div`
   width: 1440px;
@@ -32,6 +32,15 @@ const ModalLogo = styled.div`
   @media screen and (max-width: 767px) {
     margin: 20px 20px 47px 20px;
     width: 414px;
+    height: 52px;
+  }
+`;
+
+const ModalIcon = styled.img`
+  width: 259px;
+  height: 90px;
+  @media screen and (max-width: 767px) {
+    width: 149px;
     height: 52px;
   }
 `;
@@ -139,7 +148,7 @@ export const ModalGreenwich = ({ openModal, setOpenModal }) => {
       {openModal ? (
         <ModalWindow>
           <ModalLogo>
-            <img src={ModLogo} />
+            <ModalIcon src={ModLogo} />
             <ButtonClose onClick={() => setOpenModal((prev) => !prev)} />
           </ModalLogo>
           <MainContent>

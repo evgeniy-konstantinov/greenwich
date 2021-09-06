@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import ship from "../images/ship-in-sea.png";
-import Btn from "../components/button";
-import Navigate from "./nav";
+import React from 'react';
+import styled from 'styled-components';
+import ship from '../images/ship-in-sea.png';
+import Btn from '../components/button';
+import Navigate from './nav';
 
 const MainSection = styled.section`
   position: relative;
@@ -16,6 +16,7 @@ const MainSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media screen and (max-width: 767px) {
     width: 100%;
     height: 530px;

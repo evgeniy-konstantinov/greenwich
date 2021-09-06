@@ -14,7 +14,7 @@ const MainContacts = styled.div`
   align-items: center;
   justify-content: center;
   @media screen and (max-width: 767px) {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     padding-top: 30px;
   }
@@ -22,6 +22,10 @@ const MainContacts = styled.div`
 const ContactsBlock = styled.div`
   width: 730px;
   margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 767px) {
     width: 100%;
   }
@@ -81,6 +85,7 @@ const BigerInput = styled.textarea`
 `;
 
 const SubText = styled.p`
+  width: 648px;
   margin-top: 30px;
   font-size: 14px;
   line-height: 23px;
@@ -88,8 +93,10 @@ const SubText = styled.p`
   color: rgba(19, 19, 19, 0.6);
   opacity: 0.8;
   @media screen and (max-width: 767px) {
+    width: 374px;
     font-size: 12px;
     margin: 20px 0 40px;
+    padding: 0 20px;
   }
 `;
 
@@ -136,8 +143,8 @@ export default function Contacts() {
       <Btn>SUBMIT</Btn>
       <SubText>
         By submiting this form I consent to have my data collected in order to
-        process this request. We will add
-        <br /> your info to our CRM for contacting you regarding your request.
+        process this request. We will add your info to our CRM for contacting
+        you regarding your request.
       </SubText>
       <ProdjectBtn onClick={ScrollUp} />
     </MainContacts>

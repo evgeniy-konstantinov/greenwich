@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import logo from "../images/safari-pinned-tab 1.png";
-import phone from "../images/phone.png";
-import poi from "../images/poi_outlined.png";
+import React from 'react';
+import styled from 'styled-components';
+import logo from '../images/safari-pinned-tab 1.png';
+import phone from '../images/phone.png';
+import poi from '../images/poi_outlined.png';
 
 const MainFooter = styled.div`
   max-width: 1920px;
@@ -19,7 +19,6 @@ const FooterFlex = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /* position: relative; */
   @media screen and (max-width: 767px) {
     width: 100%;
     flex-direction: column;
@@ -33,6 +32,8 @@ const FooterImg = styled.img`
   margin: 32px 0 28px;
   @media screen and (max-width: 767px) {
     margin: 40px 0;
+    width: 149px;
+    height: 52px;
   }
 `;
 
@@ -40,13 +41,8 @@ const Copyright = styled.p`
   color: #fff;
   font-size: 12px;
   line-height: 28px;
-  /* position: absolute; */
-  display: inline-block;
-  margin-left: 395px;
   @media screen and (max-width: 767px) {
-    margin: 0 0 40px 58px;
-    display: inline-block;
-    
+  }
 `;
 
 const FooterAddress = styled.div`
@@ -77,6 +73,18 @@ const SubText = styled.div`
   line-height: 28px;
   color: #fff;
 `;
+
+const CopyrightFlex = styled.div`
+  width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  @media screen and (max-width: 767px) {
+    width: 100vw;
+    justify-content: center;
+  }
+`;
+
 export default function Footer() {
   return (
     <MainFooter>
@@ -97,9 +105,11 @@ export default function Footer() {
           </Address>
         </FooterAddress>
       </FooterFlex>
-      <Copyright>
-        Copyright © 2021 GREENWICH TRADE LIMITED. All rights reserved.
-      </Copyright>
+      <CopyrightFlex>
+        <Copyright>
+          Copyright © 2021 GREENWICH TRADE LIMITED. All rights reserved.
+        </Copyright>
+      </CopyrightFlex>
     </MainFooter>
   );
 }

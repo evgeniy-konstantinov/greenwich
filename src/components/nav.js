@@ -12,7 +12,7 @@ const Section = styled.section`
   z-index: 10;
   display: flex;
   justify-content: center;
-
+  align-items: center;
   @media screen and (max-width: 767px) {
     width: 100%;
   }
